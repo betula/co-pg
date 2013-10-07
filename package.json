@@ -1,0 +1,9 @@
+{
+  "name": "co-pg",
+  "description": "",
+  "version": "0.0.1",
+  "main": "index.js",
+  "dependencies": {
+    "pg": "~2.7.0"
+  }
+}
