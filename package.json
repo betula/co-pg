@@ -5,5 +5,14 @@
   "main": "index.js",
   "dependencies": {
     "pg": "~2.7.0"
+  },
+  "devDependencies": {
+    "should": "~1.2.2",
+    "mocha": "~1.10.0",
+    "co": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/betula/co-pg.git"
   }
 }
