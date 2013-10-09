@@ -1,11 +1,12 @@
 var pg = require('pg');
 
+exports.Client = Client;
+
 function Client(config) {
   ClientDecorator.call(this, new pg.Client(config));
 }
 Client.prototype = Object.create(ClientDecorator.prototype);
-
-exports.Client = Client;
+Client.md5 = pg.Client.md5;
 
 
 Object.defineProperty(exports, 'pools', {
@@ -76,11 +77,12 @@ ClientDecorator.prototype.query = function() {
 });
 
 // pg.Client
-['cancel', 'escapeIdentifier', 'escapeLiteral', 'copyFrom', 'copyTo', 'end', 'md5'].forEach(function(name) {
+['cancel', 'escapeIdentifier', 'escapeLiteral', 'copyFrom', 'copyTo', 'end'].forEach(function(name) {
   ClientDecorator.prototype[name] = function() {
     return this.client[name].apply(this.client, arguments);
   }
 });
+
 
 
 

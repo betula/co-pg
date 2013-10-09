@@ -21,6 +21,12 @@ describe('Simple', function() {
       done();
     });
   });
+
+  it('client md5 method should work', function() {
+    var md5 = pg.Client.md5('hello');
+    assert(md5 == '5d41402abc4b2a76b9719d911017c592');
+  });
+
 });
 
 describe('Client pooling', function() {
