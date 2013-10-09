@@ -1,8 +1,7 @@
 var pg = require('pg');
 
-function Client() {
-  var args = [].slice.call(arguments);
-  ClientDecorator.call(this, new pg.Client(args));
+function Client(config) {
+  ClientDecorator.call(this, new pg.Client(config));
 }
 Client.prototype = Object.create(ClientDecorator.prototype);
 
