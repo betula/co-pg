@@ -37,7 +37,7 @@ exports.connect = function() {
 function ClientDecorator(client, done) {
   this.client = client;
   if (done) {
-    this.done = done;
+    this.free = this.done = done;
   }
 }
 
