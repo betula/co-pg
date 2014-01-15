@@ -9,7 +9,7 @@
   "devDependencies": {
     "should": "~1.2.2",
     "mocha": "~1.10.0",
-    "co": "*"
+    "co": "~3.0.2"
   },
   "repository": {
     "type": "git",

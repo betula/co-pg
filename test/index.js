@@ -18,8 +18,7 @@ describe('Simple', function() {
       assert(String(result.rows[0].theTime).indexOf(new Date().getFullYear()) != -1);
       client.end();
 
-      done();
-    });
+    })(done);
   });
 
   it('client md5 method should work', function() {
@@ -39,7 +38,6 @@ describe('Client pooling', function() {
       client.done();
       assert(result.rows[0].numbor === 1);
 
-      done();
-    });
+    })(done);
   });
 });
