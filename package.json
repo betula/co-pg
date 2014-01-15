@@ -1,10 +1,10 @@
 {
   "name": "co-pg",
   "description": "",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js",
   "dependencies": {
-    "pg": "~2.7.0"
+    "pg": "~2.11.0"
   },
   "devDependencies": {
     "should": "~1.2.2",
